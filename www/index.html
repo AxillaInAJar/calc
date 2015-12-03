@@ -1,0 +1,49 @@
+<head>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/hover-min.css">
+	<style type="text/css">
+	   /* Stylesheet override */
+           .hvr-radial-out:before {
+  		background-color:rgba(33,33,33,0.2);
+           } 
+           #calc-head {
+           	background-color:#000000;
+           }
+           #del.hvr-radial-out:before { background-color:rgb(244,67,54); }
+           #eql.hvr-radial-out:before { background-color:rgb(76,175,80); }
+           #op.hvr-radial-out:before { background-color:#1E88E5; }
+           #m-link:hover { cursor:pointer; }
+	</style>
+	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+        <script type="text/javascript" src="js/scripts.js"></script>
+</head>
+<div id='calc'>
+  <div id='calc-head'>
+	<div id='menu-button'><img src='img/menu.png' onclick='alert("[menu coming soon]");'></div>
+  	Basic Calculator<br/>Made with <img src='img/heart.png' style='margin-bottom:-5px;'/> by Max</div>
+  <div id='calc-input'></div>
+  <div id='calc-buttons'>
+    <button onClick='calc.input(7)' class='hvr-radial-out'>7</button>
+    <button onClick='calc.input(8)' class='hvr-radial-out'>8</button>
+    <button onClick='calc.input(9)' class='hvr-radial-out'>9</button>
+    <button onClick='calc.input("+")' class='hvr-radial-out' id='op'>+</button>
+    <br/>
+    <button onClick='calc.input(4)' class='hvr-radial-out'>4</button>
+    <button onClick='calc.input(5)' class='hvr-radial-out'>5</button>
+    <button onClick='calc.input(6)' class='hvr-radial-out'>6</button>
+    <button onClick='calc.input("-")' class='hvr-radial-out' id='op'>-</button>
+    <br/>
+    <button onClick='calc.input(1)' class='hvr-radial-out'>1</button>
+    <button onClick='calc.input(2)' class='hvr-radial-out'>2</button>
+    <button onClick='calc.input(3)' class='hvr-radial-out'>3</button>
+    <button onClick='calc.input("*")' class='hvr-radial-out' id='op'>&times;</button>
+    <br/>
+    <button onClick='calc.bkspc()' class='hvr-radial-out'>&larr;</button>
+    <button onClick='calc.input(0)' class='hvr-radial-out'>0</button>
+    <button onClick='calc.input(".")' class='hvr-radial-out'>&middot;</button>
+    <button onClick='calc.input("/")' class='hvr-radial-out' id='op'>&divide;</button>
+    <br/>
+    <button class='hvr-radial-out' id='del' onClick='calc.clear()'>Del</button>
+    <button class='hvr-radial-out' id='eql' onClick='calc.eval()'>=</button>
+  </div>
+</div>
